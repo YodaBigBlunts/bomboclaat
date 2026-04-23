@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+   
+body {
+    margin: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    overflow: auto;
+}
+
+header {
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    color: white;
+    width: 100%;
+    background-color: rgb(31, 31, 31);
+    margin-top: auto;
+    font-family: helvetica;
+}
+
+.kuva {
+  background-image: url("lappi.png ");
+  background-color: #cccccc;
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
+.terve {
+    text-align: center;
+    flex: 1;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    margin: 10%;
+    text-shadow: black 0.2em 0.5em 0.3em;
+}
+
+.ruokalista {
+    flex: 1;
+    margin: 10%;
+    text-align: center;
+    font-size: large;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 15px;
+    color: white;
+}
+
+.palaute {
+    flex: 1;
+    margin: 10%;
+    text-align: center;
+    font-size: large;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 15px;
+    color: white;
+    align-items: center;
+}
+
+.alas {
+    background-color: black;
+
+}
+
+.tiedot {
+    text-align: left;
+    flex: 1;
+    margin-left: 1%;
+    font-size: larger;
+}
+
+ul {
+  list-style-type: none;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(201, 90, 38);
+  font-size: large;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+ul li a.active {
+  background-color: rgb(180, 59, 3);
+}
+
+@media (max-width: 768px) {
+  .kuva {
+    display: block;
+    background-image: none;
+    background-color: rgb(180, 59, 3);
+    height: auto;
+  }
+
+  .terve {
+    flex: none;
+    margin: 20px;
+    font-size: medium;
+  }
+
+  ul {
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  ul li {
+  float: none;
+}
+
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  .kuva {
+    display: block;
+    background-image: none;
+    background-color: rgb(180, 59, 3);
+    height: auto;
+  }
+
+  .terve {
+    flex: none;
+    margin: 20px;
+    font-size: medium;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="Ravintola.html">Koti</a></li>
+  <li><a class="active" href="Asiakaspalaute.html">Asiakaspalaute</a></li>
+</ul>
+
+<div class="kuva">
+    <div class="terve">
+        <h2>Asiakaspalaute</h2>
+    </div>
+</div>
+
+<div class="alas">
+    <div class="palaute">
+
+<form action="/action_page.php" target="_blank">
+  <label for="fname"> <h2>1. Käyntipäivämäärä:</h2></label>
+  <input type="date" id="datemax" name="datemax" max="2025-12-31" min="1900-01-01"><br><br>
+
+  <label for="nimi"> <h2>2. Odotusaika:</h2></label>
+  <p>Kuinka kauan jouduit odottamaan ruokaa tilauksesta?</p>
+  <label for="Mies">Alle 10 min</label><br>
+  <input type="radio" id="nimi" name="nimi"><br>
+  <label for="Mies">10-20 min</label><br>
+  <input type="radio" id="nimi" name="nimi"><br>
+  <label for="Mies">20-30 min</label><br>
+  <input type="radio" id="nimi" name="nimi"><br>
+  <label for="Mies">Yli 30 min</label><br>
+  <input type="radio" id="nimi" name="nimi"><br><br>
+
+ <h2>3. Ruoka</h2>
+ <p>Arvioi seuraavat osa-alueet asteikolla 1-5 (1 = erittäin huono, 5 = erinomainen)</p> 
+<label for="maku">Maku:</label>
+<select id="maku" name="maku">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Lämpötila">Lämpötila:</label>
+<select id="Lämpötila" name="Lämpötila">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Ulkonäkö/Esillepano">Ulkonäkö/Esillepano:</label>
+<select id="Ulkonäkö/Esillepano" name="Ulkonäkö/Esillepano">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Annoskoko">Annoskoko:</label>
+<select id="Annoskoko" name="Annoskoko">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Raaka-aineiden laatu">Raaka-aineiden laatu:</label>
+<select id="Raaka-aineiden laatu" name="Raaka-aineiden laatu">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+
+ <h2>4. Hinta-laatusuhde</h2>
+ <p>Kuinka koit hintojen ja laadun suhteen?</p> 
+
+<select id="maku" name="maku">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+
+ <h2>5. Palvelu</h2>
+ <p>Arvioi asteikolla 1-5 (1 = erittäin huono, 5 = erinomainen)</p> 
+<label for="Ystävällisyys">Ystävällisyys:</label>
+<select id="Ystävällisyys" name="Ystävällisyys">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Ammattitaito">Ammattitaito:</label>
+<select id="Ammattitaito" name="Ammattitaito">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Nopeus">Nopeus:</label>
+<select id="Nopeus" name="Nopeus">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Palvelun huomioivuus">Palvelun huomioivuus:</label>
+<select id="Palvelun huomioivuus" name="Palvelun huomioivuus">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+
+ <h2>6. Ruoka</h2>
+<label for="Siisteys">Siisteys:</label>
+<select id="Siisteys" name="Siisteys">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Viihtyvyys">Viihtyvyys:</label>
+<select id="Viihtyvyys" name="Viihtyvyys">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+<label for="Tunnelma">Tunnelma:</label>
+<select id="Tunnelma" name="Tunnelma">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+
+ <h2>7. Kokonaisarvio</h2>
+<p>Kuinka todennäköisesti suosittelisit ravintolaamme muille?</p>
+<select id="Siisteys" name="Siisteys">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select><br><br>
+
+  <h2>8. Vapaa palaute</h2>
+  <p>Mikä meni erityisen hyvin? Missä voimme parantaa?</p>
+  <textarea name="message" rows="5" cols="30"></textarea> <br><br>
+
+  <h2>9. Yhteydenotto</h2>
+  <p>Haluan, että ravintola ottaa minuun yhteyttä palautteeseeni liittyen:</p>
+  <label for="Kyllä">Kyllä</label><br>
+  <input type="radio" id="Kyllä" name="nimi"><br>
+  <label for="Ei">Ei</label><br>
+  <input type="radio" id="Ei" name="nimi"><br>
+
+  <label for="nimi">Nimi:</label><br>
+  <input type="text" id="nimi" name="nimi"><br><br>
+  <label for="Sähköposti">Sähköposti:</label><br>
+  <input type="text" id="Sähköposti" name="Sähköposti"><br><br>
+  <label for="puhelinnumero">Puhelinnumero:</label><br>
+  <input type="text" id="puhelinnumero" name="puhelinnumero"><br><br>
+
+  <input type="submit" value="Submit">
+</form> 
+
+    </div>
+</div>
+
+<footer>
+<div class="tiedot">
+<h2 style="text-decoration: underline;">Yhteystiedot ja aukioloajat:</h2>
+<p>Ravintola Lapintaika, Ravintolakatu 2, 98765 LAPINMAA</p>
+<p>Puh. (012) 345 6789</p>
+<p>Sähköposti: varaukset@jokuposti.net</p>
+<p>aukioloajat: ma - pe, 10:30 - 15:00</p>
+</div>
+<img src="Brown and White Simple Restaurant Logo.png" alt="Logo" style="width:220px;height:220px;">
+</footer>
+
+</body>
+</html>
+
+
+
+

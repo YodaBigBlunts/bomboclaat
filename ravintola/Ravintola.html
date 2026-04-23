@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravintola Lapintaika</title>
+<style>
+   
+body {
+    margin: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    overflow: auto;
+}
+
+header {
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    color: white;
+    width: 100%;
+    background-color: rgb(31, 31, 31);
+    margin-top: auto;
+    font-family: helvetica;
+}
+
+.kuva {
+  background-image: url("lappi.png ");
+  background-color: #cccccc;
+  flex: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
+.terve {
+    text-align: center;
+    flex: 1;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    margin: 10%;
+    text-shadow: black 0.2em 0.5em 0.3em;
+}
+
+.ruokalista {
+    flex: 1;
+    margin: 10%;
+    text-align: center;
+    font-size: large;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 15px;
+    color: white;
+}
+
+.alas {
+    background-color: black;
+
+}
+
+.tiedot {
+    text-align: left;
+    flex: 1;
+    margin-left: 1%;
+    font-size: larger;
+}
+
+ul {
+  list-style-type: none;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(201, 90, 38);
+  font-size: large;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: rgb(31, 31, 31);
+}
+
+ul li a.active {
+  background-color: rgb(180, 59, 3);
+}
+
+@media (max-width: 768px) {
+  .kuva {
+    display: block;
+    background-image: none;
+    background-color: rgb(180, 59, 3);
+    height: auto;
+  }
+
+  .terve {
+    flex: none;
+    margin: 20px;
+    font-size: medium;
+  }
+
+  ul {
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  ul li {
+  float: none;
+}
+
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  .kuva {
+    display: block;
+    background-image: none;
+    background-color: rgb(180, 59, 3);
+    height: auto;
+  }
+
+  .terve {
+    flex: none;
+    margin: 20px;
+    font-size: medium;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="Ravintola.html">Koti</a></li>
+  <li><a href="Asiakaspalaute.html">Asiakaspalaute</a></li>
+</ul>
+
+<div class="kuva">
+    <div class="terve">
+    <h2>Ravintola Lapintaika. <br> Viihtyisä olohuone <br> keskellä Lappia!</h2>
+    <p>Lapin viihtyisin kohtaamispaikka aamusta iltamyöhään. <br> Tule lounaalle, nauti hyvästä kahvista <br> tai lasillisesta - tai viivy illallisella sesongin makujen äärellä.</p>
+    </div>
+</div>
+
+<div class="alas">
+    <div class="ruokalista">
+    <h1 style="text-decoration: underline;">Ruokalista</h1>
+    <h2>Maanantai</h2>
+    <h3>Juusto-vihanneskeittoa ja kokin sämpylä. <br> Paistettua lohta, sinappikastiketta, tilliperunoita ja kasviksia. <br> Marjakiisseliä ja hunajakermavaahtoa.</h3>
+    <h2>Tiistai</h2>
+    <h3>Kana-fetajustosalaattia ja kokin sämpylä. <br> Paistettua punakampelaa, pinaattikastiketta ja perunamuusia. <br> Pannukakkua, mansikkahilloa ja kermavaahtoa.</h3>
+    <h2>Keskiviikko</h2>
+    <h3>Tomaatti-yrttikeittoa ja kokin sämpylä. <br> Kalkkunaleikettä, BBQ-kastiketta, riisiä ja kasviksia. <br> Omenapiirakkaa ja vaniljakastiketta.</h3>
+    <h2>Torstai</h2>
+    <h3>Rapukeittoa ja kokin sämpylä. <br> Poronkäristystä, perunamuusia, puolukkahilloa ja suolakurkkuja. <br> Hedelmäsalaattia ja kinuskikastiketta.</h3>
+    <h2>Perjantai</h2>
+    <h3>Savulohisalaatti ja kokin sämpylä. <br> Naudan paahtopaistia, punaviinikastiketta, kermaperunat ja kasviksia. <br> Suklaamousse.</h3>
+    <p>Lounaan hinta: 11.90 euroa, sisältäen ruokajuoman: vesi, kotikalja, maito</p>
+    </div>
+</div>
+
+<footer>
+<div class="tiedot">
+<h2 style="text-decoration: underline;">Yhteystiedot ja aukioloajat:</h2>
+<p>Ravintola Lapintaika, Ravintolakatu 2, 98765 LAPINMAA</p>
+<p>Puh. (012) 345 6789</p>
+<p>Sähköposti: varaukset@jokuposti.net</p>
+<p>aukioloajat: ma - pe, 10:30 - 15:00</p>
+</div>
+<img src="Brown and White Simple Restaurant Logo.png" alt="Logo" style="width:220px;height:220px;">
+</footer>
+
+</body>
+</html>
+
+
